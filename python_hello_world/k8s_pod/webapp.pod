@@ -1,0 +1,16 @@
+apiVersion: "v1"
+kind: Pod
+metadata: 
+   name: "webapp"
+   labels: 
+      name: "webapp"
+      app: "demoapp" 
+spec: 
+   containers: 
+      - name: webapp
+        image: danielcaldwell/python_helloworld:1.0
+        ports: 
+           - containerPort: 5000
+             name: http
+             protocol: TCP
+
