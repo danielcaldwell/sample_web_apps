@@ -1,0 +1,25 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata: 
+   name: "python-helloworld-deployment"
+   labels: 
+      name: "python-helloworld"
+      app: "python-helloworld-app"
+spec: 
+   replicas: 15
+   selector: 
+      matchLabels:
+         app: "python-helloworld-app"
+   template: 
+      metadata: 
+         labels: 
+            app: "python-helloworld-app"
+      spec: 
+         containers: 
+            - name: "python-helloworld"
+              image: danielcaldwell/python_helloworld:1.0
+              ports: 
+                 - containerPort: 5000
+                   name: http
+                   protocol: TCP
+
