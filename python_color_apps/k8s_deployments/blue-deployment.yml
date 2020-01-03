@@ -1,0 +1,25 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata: 
+   name: "python-blue-deployment"
+   labels: 
+      name: "python-blue"
+      app: "python-blue"
+spec: 
+   replicas: 15
+   selector: 
+      matchLabels:
+         app: "python-blue-app"
+   template: 
+      metadata: 
+         labels: 
+            app: "python-blue-app"
+      spec: 
+         containers: 
+            - name: "python-blue"
+              image: danielcaldwell/python_blue:1.0
+              ports: 
+                 - containerPort: 5000
+                   name: http
+                   protocol: TCP
+

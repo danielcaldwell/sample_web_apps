@@ -1,0 +1,25 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata: 
+   name: "python-green-deployment"
+   labels: 
+      name: "python-green"
+      app: "python-green-app"
+spec: 
+   replicas: 15
+   selector: 
+      matchLabels:
+         app: "python-green-app"
+   template: 
+      metadata: 
+         labels: 
+            app: "python-green-app"
+      spec: 
+         containers: 
+            - name: "python-green"
+              image: danielcaldwell/python_green:1.0
+              ports: 
+                 - containerPort: 5000
+                   name: http
+                   protocol: TCP
+

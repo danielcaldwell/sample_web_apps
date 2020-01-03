@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata: 
+   name: python-red-ingress
+spec: 
+   rules: 
+      - host: red.example.com
+        http:
+           paths: 
+              - backend: 
+                   serviceName: python-red
+                   servicePort: 80 

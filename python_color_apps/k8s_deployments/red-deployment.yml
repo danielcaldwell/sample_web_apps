@@ -1,0 +1,25 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata: 
+   name: "python-red-deployment"
+   labels: 
+      name: "python-red"
+      app: "python-red-app"
+spec: 
+   replicas: 15
+   selector: 
+      matchLabels:
+         app: "python-red-app"
+   template: 
+      metadata: 
+         labels: 
+            app: "python-red-app"
+      spec: 
+         containers: 
+            - name: "python-red"
+              image: danielcaldwell/python_red:1.0
+              ports: 
+                 - containerPort: 5000
+                   name: http
+                   protocol: TCP
+

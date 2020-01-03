@@ -1,14 +1,14 @@
 apiVersion: "v1"
 kind: Service
 metadata: 
-   name: "python-helloworld"
+   name: "python-red"
    labels: 
-      app: "python-helloworld"
+      app: "python-red"
 spec: 
    ports: 
       - port: 80
         name: webapp
         targetPort: 5000
    selector: 
-      app: "python-helloworld-app"
+      app: "python-red-app"
    type: NodePort

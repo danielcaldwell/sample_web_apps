@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata: 
+   name: python-green-ingress
+spec: 
+   rules: 
+      - host: green.example.com
+        http:
+           paths: 
+              - backend: 
+                   serviceName: python-green
+                   servicePort: 80 
