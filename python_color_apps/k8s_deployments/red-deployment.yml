@@ -1,12 +1,12 @@
 apiVersion: "apps/v1"
 kind: Deployment
 metadata: 
-   name: "python-red-deployment"
+   name: "python-red"
    labels: 
       name: "python-red"
       app: "python-red-app"
 spec: 
-   replicas: 15
+   replicas: 3
    selector: 
       matchLabels:
          app: "python-red-app"

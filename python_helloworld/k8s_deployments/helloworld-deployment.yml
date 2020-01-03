@@ -1,12 +1,12 @@
 apiVersion: "apps/v1"
 kind: Deployment
 metadata: 
-   name: "python-helloworld-deployment"
+   name: "python-helloworld"
    labels: 
       name: "python-helloworld"
       app: "python-helloworld-app"
 spec: 
-   replicas: 15
+   replicas: 3
    selector: 
       matchLabels:
          app: "python-helloworld-app"

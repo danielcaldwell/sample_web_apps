@@ -1,12 +1,12 @@
 apiVersion: "apps/v1"
 kind: Deployment
 metadata: 
-   name: "python-green-deployment"
+   name: "python-green"
    labels: 
       name: "python-green"
       app: "python-green-app"
 spec: 
-   replicas: 15
+   replicas: 3
    selector: 
       matchLabels:
          app: "python-green-app"
