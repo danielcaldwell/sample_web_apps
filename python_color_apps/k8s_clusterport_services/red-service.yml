@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: Service
+metadata: 
+   name: "python-red"
+   labels: 
+      app: "python-red"
+spec: 
+   ports: 
+      - port: 80
+        name: webapp
+        targetPort: 5000
+   selector: 
+      app: "python-red-app"
+   type: ClusterIP
