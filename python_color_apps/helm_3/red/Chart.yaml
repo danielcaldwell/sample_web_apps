@@ -1,0 +1,6 @@
+name: Red Server
+version: 1.0.0
+description: Simple webserver that returns red
+maintainers:
+   - name: Daniel Caldwell
+
