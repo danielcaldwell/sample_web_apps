@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata: 
+   name: print_requests_ingress
+spec: 
+   rules: 
+      - host: printrequests.example.com
+        http:
+           paths: 
+              - backend: 
+                   serviceName: print_requests
+                   servicePort: 80 

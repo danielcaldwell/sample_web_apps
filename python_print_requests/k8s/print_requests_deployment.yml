@@ -1,0 +1,25 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata: 
+   name: "print_requests"
+   labels: 
+      name: "print_requests"
+      app: "print_requests_app"
+spec: 
+   replicas: 3
+   selector: 
+      matchLabels:
+         app: "print_requests_app"
+   template: 
+      metadata: 
+         labels: 
+            app: "print_requests_app"
+      spec: 
+         containers: 
+            - name: "print_requests"
+              image: danielcaldwell/print_requests:1.0
+              ports: 
+                 - containerPort: 5000
+                   name: http
+                   protocol: TCP
+

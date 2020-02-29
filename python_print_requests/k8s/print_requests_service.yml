@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: Service
+metadata: 
+   name: "print_requests"
+   labels: 
+      app: "print_requests"
+spec: 
+   ports: 
+      - port: 80
+        name: webapp
+        targetPort: 5000
+   selector: 
+      app: "print_requests_app"
+   type: NodePort

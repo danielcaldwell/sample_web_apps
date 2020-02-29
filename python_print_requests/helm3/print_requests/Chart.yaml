@@ -1,0 +1,6 @@
+name: Print Requests Server
+version: 1.0.0
+description: Simple webserver that returns prints request and response information to test upstream headers being added by proxy servers
+maintainers:
+   - name: Daniel Caldwell
+
