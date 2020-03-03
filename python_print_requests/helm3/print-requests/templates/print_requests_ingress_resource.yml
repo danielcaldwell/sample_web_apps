@@ -2,12 +2,12 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata: 
-   name: print_requests_ingress
+   name: print-requests-ingress
 spec: 
    rules: 
-      - host: printrequests.example.com
+      - host: print-requests.amigocloud.com
         http:
            paths: 
               - backend: 
-                   serviceName: print_requests
+                   serviceName: print-requests
                    servicePort: 80 

@@ -1,2 +1,3 @@
-kubectl create namespace print_requests
-helm install "print_requests-v1" print_requests
+kubectl create namespace print-requests
+kubens print-requests
+helm install "print-requests" print-requests

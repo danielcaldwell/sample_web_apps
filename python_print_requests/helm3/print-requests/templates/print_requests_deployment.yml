@@ -1,22 +1,22 @@
 apiVersion: "apps/v1"
 kind: Deployment
 metadata: 
-   name: "print_requests"
+   name: "print-requests"
    labels: 
-      name: "print_requests"
-      app: "print_requests_app"
+      name: "print-requests"
+      app: "print-requests-app"
 spec: 
    replicas: 3
    selector: 
       matchLabels:
-         app: "print_requests_app"
+         app: "print-requests-app"
    template: 
       metadata: 
          labels: 
-            app: "print_requests_app"
+            app: "print-requests-app"
       spec: 
          containers: 
-            - name: "print_requests"
+            - name: "print-requests"
               image: danielcaldwell/print_requests:1.0
               ports: 
                  - containerPort: 5000
